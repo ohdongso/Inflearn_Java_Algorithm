@@ -4,14 +4,15 @@ import java.util.Scanner;
 
 public class Main {
 	
-	public int solution(String str, char t) {
-		int answer = 0;
-		
-		str = str.toUpperCase();
-		t = Character.toUpperCase(t);
+	public String solution(String str) {
+		String answer = "";
 		
 		for(char x : str.toCharArray()) {
-			if(x == t) answer++;
+			if(Character.isLowerCase(x)) {
+				answer += Character.toUpperCase(x);
+			} else {
+				answer += Character.toLowerCase(x);
+			}
 		}
 		
 		return answer;
@@ -22,10 +23,6 @@ public class Main {
 		
 		Scanner kb = new Scanner(System.in);
 		String str = kb.next();
-		char c = kb.next().charAt(0);
-		
-		System.out.print(T.solution(str, c));
-
+		System.out.print(T.solution(str));
 	}
-
 }
