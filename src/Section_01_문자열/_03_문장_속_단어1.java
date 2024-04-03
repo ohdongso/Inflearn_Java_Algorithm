@@ -2,8 +2,8 @@ package Section_01_문자열;
 
 import java.util.Scanner;
 
-public class Main {
-	
+public class _03_문장_속_단어1 {
+
 	public String solution(String str) {
 		String answer = "";
 		int m = Integer.MIN_VALUE; // int형의 가장 작은 값으로 초기화
@@ -20,9 +20,9 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_03_문장_속_단어1 T = new _03_문장_속_단어1();
 		Scanner kb = new Scanner(System.in);
 		String str = kb.nextLine();
-		System.out.print(T.solution(str));
+		System.out.print(T.solution(str));	
 	}
 }
