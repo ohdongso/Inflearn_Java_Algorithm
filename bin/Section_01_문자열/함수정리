@@ -1,6 +1,11 @@
-1강부터 천천히 정리하자.!
-- next():문자형을 입력받는다.
-- charAt(index):물자열에서 index에 해당하는 문자형을 추출한다.
-
-- toUpperCase:문자열, 문자형을 대문자로 변경 할 수 있다.
-- 
+-next():문자형을 입력받는다.
+-charAt(index):문자열에서 index에 해당하는 문자형을 추출한다.
+-문자열.toUpperCase:문자열을 대문자로 변경 할 수 있다.
+-Character.toUpperCase(문자형):문자형을대문자로 변경할수 있다.
+-문자열.toCharArray():문자열을 문자형으로 하나씩 잘라서 반환한다.
+-nextLine():문자열을 입력받는다.
+-Integer.MIN_VALUE:int형의 가장 작은 값으로 초기화
+-문자열.split(" "):split안의 구분자를 기준으로 문자열을 자른다.
+-문자열substring():substring(0,5)을 하면 index번호로 0~5를 가리키고 실제로 0~4를 잘라낸다, 마지막 값 -1이라고 생각하면 된다.
+ substring 인수값(n)이 하나만 들어갈 경우 index (0 ~ n-1) 여기까지 잘라낸다.
+-
