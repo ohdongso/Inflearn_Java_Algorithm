@@ -2,7 +2,7 @@ package Section_01_문자열;
 
 import java.util.Scanner;
 
-public class _01_문자_찾기_1 {
+public class _01_문자_찾기1 {
 	
 	/*
 	 1, next()로 문자열을 입력받는다.
@@ -29,7 +29,7 @@ public class _01_문자_찾기_1 {
 	}
 	
 	public static void main(String[] args) {
-		_01_문자_찾기_1 T = new _01_문자_찾기_1();
+		_01_문자_찾기1 T = new _01_문자_찾기1();
 		
 		Scanner kb = new Scanner(System.in);
 		String str = kb.next();

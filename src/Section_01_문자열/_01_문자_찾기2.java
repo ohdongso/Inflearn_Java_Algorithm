@@ -2,7 +2,7 @@ package Section_01_문자열;
 
 import java.util.Scanner;
 
-public class _01_문자_찾기_2 {
+public class _01_문자_찾기2 {
 	
 	public int solution(String str, char t) {
 		int answer = 0;
@@ -18,7 +18,7 @@ public class _01_문자_찾기_2 {
 	}
 	
 	public static void main(String[] args) {
-		_01_문자_찾기_2 T = new _01_문자_찾기_2();
+		_01_문자_찾기2 T = new _01_문자_찾기2();
 		
 		Scanner kb = new Scanner(System.in);
 		String str = kb.next();
