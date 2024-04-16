@@ -11,4 +11,5 @@
  substring 인수값(n)이 하나만 들어갈 경우 index (0 ~ n-1) 여기까지 잘라낸다.
 -StringBuilder(x).reverse():입력받은 문자열을 뒤집는다.
 -StringBuilder(x).toString():StringBuilder객체를 String객체로 변환한다.
--String.valueOf(s):char[]배열을 String화 시켜주는 함수.
+-String.valueOf(s):char[]배열을 String형으로 변환 시켜주는 함수.
+-Character.isAlphabetic():char형 값이 알파벳이면 true를 반환한다.
