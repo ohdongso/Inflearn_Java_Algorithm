@@ -1,9 +1,13 @@
 package Section_01_문자열;
 
 import java.util.Scanner;
+	/*
+		각 문자가 자기의 좌측 e와 떨어진 거리를 구하는 것, 진행방향 ->
+		각 문자가 자기의 우측 e와 떨어진 거리를 구하는 것, 진행방향 <-
+		진행방향 2가지를 조합해 가까운(작은값) e와의 거리를 answer배열에 저장한다.
+	*/
 
-public class Main {
-	
+public class _10_가장_짧은_문자거리1 {
 	
 	// 매개변수로 (teachermode, e) 2개의 값이 넘어 왔다.
 	public int[] solution(String s, char t) {
@@ -52,7 +56,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_10_가장_짧은_문자거리1 T = new _10_가장_짧은_문자거리1();
 		Scanner kb = new Scanner(System.in);
 		
 		String str = kb.next(); // 문자열 입력받는다. ==> teachermode
