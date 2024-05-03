@@ -2,9 +2,10 @@ package Section_02_Array;
 
 import java.util.Scanner;
 
-public class Main {
+public class _12_멘토링1 {
+//	static int aaa = 0;
+	
 	/*
-	    
 		1, m번의 수학성적이 주어지면 멘토와 멘티가 되는 짝을 만들 수 있는 경우가 총 몇 가지 인지 출력하는 프로그램을 작성하세요.
 		2, 학생수 == n, 시험수 == m, m*n 2차원 배열을 입력받는다.
 		3, 비교방법
@@ -116,14 +117,9 @@ public class Main {
 		
 		return answer;
 	}
-	public int solution(String s, char t) {
-		int answer = 1;
-
-		return answer;
-	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_12_멘토링1 T = new _12_멘토링1();
 		Scanner kb = new Scanner(System.in);
 		int n = kb.nextInt(); // 학생 수 ==> 4
 		int m = kb.nextInt(); // 시험 수 ==> 3
@@ -161,5 +157,7 @@ public class Main {
 		 */
 		
 		System.out.print(T.solution(n, m, arr));
+		
+//		System.out.println("aaa : " + aaa); ==> 192
 	}
 }
