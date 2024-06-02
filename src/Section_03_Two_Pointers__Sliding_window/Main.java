@@ -4,23 +4,27 @@ import java.util.Scanner;
 
 public class Main {
 
-	public int solution(int n, int m, int[] arr) {
+	public int solution(int n) {
 		int answer = 0, sum = 0, lt = 0;
+		int m = n / 2 + 1;
+		int[] arr = new int[m];
 		
-		for(int rt = 0; rt < n; rt++) { // 증가
-			sum += arr[rt]; // 더하고
-			if(sum == m) { // 확인(lt~rt까지의 합.)
+		for(int i = 0; i < m; i++) {
+			arr[i] = i + 1;
+		}
+		
+		for(int rt = 0; rt < m; rt++) {
+			sum += arr[rt];
+			if(sum == n) {
 				answer++;
 			}
-			
-			while(sum >= m) { // lt~rt 값이 m이상이면
-				 sum -= arr[lt++]; // sum에서 기존 lt값을 뺴고 lt index를 +1 해준다.
-				 if(sum == m) { // lt~rt 값이 m이면 answer을 +1 해준다.
-					 answer++;
-				 }
-			} // while문 끝.
-		} // for문 끝.
-		
+			while(sum >= n) {
+				sum -= arr[lt++];
+				if(sum == n) {
+					answer++;
+				}
+			}
+		}
 		
 		return answer;
 	}
@@ -31,14 +35,7 @@ public static void main(String[] args) {
 	Scanner kb = new Scanner(System.in);
 	
 	int n = kb.nextInt();
-	int m = kb.nextInt();
 	
-	int[] arr = new int[n];
-	
-	for(int i = 0; i < n; i++) {
-		arr[i] = kb.nextInt();
-	}
-	
-	System.out.print(T.solution(n, m, arr));
+	System.out.print(T.solution(n));
 }
 }
