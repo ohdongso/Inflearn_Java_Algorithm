@@ -4,43 +4,42 @@ import java.util.Scanner;
 
 public class _06_최대_길이_연속부분수열1 {
 	/*
-	 	1, 양의 정수 N이 입력되면 2개 이상의 연속된 자연수의 합으로 정수 N을 표현하는 방법의 가짓수를 출력
-	 	2, "N" == 2개 이상 숫자의 합으로 구해줄 정수
-	 	3, 투포인터를 사용해서 해결하면 효율적이다.
+	 	1, 0과 1로 구성된 길이가 N인 수열이 주어집니다. 이 수열에서 최대 k번을 0을 1로 변경 해서
+	 	   이 수열에서 1로만 구성된 최대 길이의 연속부분수열을 찾는 프로그램을 작성하세요.
+	 	2, 투포인터 알고리즘을 사용하면 된다.
 	 */
 	
-	public int solution(int n) {
-		int answer = 0, sum = 0, lt = 0;
-		int m = n / 2 + 1; // N에서 연속된 숫자로 만들수 있는, 연속된 값중 최대값을 의미한다.
-		int[] arr = new int[m]; // ex) 15를 입력받으면 8이 연속된 숫자중 최대값이고 배열의 크기가 된다.
-		
-		for(int i = 0; i < m; i++) { // 배열에 값 저장(1~8)
-			arr[i] = i + 1;
-		}
-		
-		for(int rt = 0; rt < m; rt++) {
-			sum += arr[rt];
-			if(sum == n) {
-				answer++;
+	public int solution(int n, int k, int[] arr) {
+		int answer = 0, cnt = 0, lt = 0;
+		for(int rt = 0; rt < n; rt++) {
+			if(arr[rt] == 0) {
+				cnt++;
 			}
-			while(sum >= n) { // sum이 n 이상인경우 lt를 계속 >>> 이동시켜서, sum이 n보다 작아지게 해준다.
-				sum -= arr[lt++];
-				if(sum == n) {
-					answer++;
+			
+			// cnt는 0이 1로 변경된 횟수를 의미하는 변수다.
+			// lt가 0이 나올때 까지 계속 증가하고, 0이 나오면 cnt를 -1해준다.
+			while(cnt > k) {
+				if(arr[lt] == 0) {
+					cnt--;
 				}
+				lt++;
 			} // while문 끝.
-		} // for문 끝.
+			
+			answer = Math.max(answer, rt-lt+1);
+		}
 		
 		return answer;
 	}
 	
 	public static void main(String[] args) {
 		_06_최대_길이_연속부분수열1 T = new _06_최대_길이_연속부분수열1();
-		
 		Scanner kb = new Scanner(System.in);
-		
 		int n = kb.nextInt();
-		
-		System.out.print(T.solution(n));
+		int k = kb.nextInt();
+		int[] arr = new int[n];
+		for(int i = 0; i < n; i++) {
+			arr[i] = kb.nextInt();
+		}
+		System.out.print(T.solution(n, k, arr));
 	}
 }
