@@ -1,0 +1,5 @@
+-kb.nextInt(): 해당 함수로 공백이 있는 숫자를 입력(7 3 9 5 6 12)받을 때 
+ for문을 통해서 숫자 개수만큼 반복해서 한번에 받을수 있다. nextInt는 공백을 포함하지 않기때문에 for문으로 각각 입력 받을수있다.
+-Integer.MIN_VALUE: 정수의 최소값을 표현
+-Integer.MAX_VALUE: 정수의 최대값을 표현
+-Math.max(x, y): x, y중 큰 수를 반환하는 함수
