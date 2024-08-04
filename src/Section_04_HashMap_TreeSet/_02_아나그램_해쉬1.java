@@ -3,7 +3,7 @@ package Section_04_HashMap_TreeSet;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class _02_아나그램_해쉬 {
+public class _02_아나그램_해쉬1 {
 	
 	public String solution(String s1, String s2) {
 		String answer = "YES";
@@ -24,7 +24,7 @@ public class _02_아나그램_해쉬 {
 	}
 	
 	public static void main(String[] args) {
-		_02_아나그램_해쉬 T = new _02_아나그램_해쉬();
+		_02_아나그램_해쉬1 T = new _02_아나그램_해쉬1();
 		Scanner kb = new Scanner(System.in);
 		String a = kb.next();
 		String b = kb.next();

@@ -1,33 +1,44 @@
 package Section_04_HashMap_TreeSet;
 
-import java.util.HashMap; 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
 	
-	public String solution(String s1, String s2) {
-		String answer = "YES";
-		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
-		for(char x : s1.toCharArray()) { // 첫 번째 문자열을 map의 key에 맞게 카운팅 해주는 구문.
-			map.put(x, map.getOrDefault(x, 0) + 1);
-		}
-		for(char x : s2.toCharArray()) {
-			// map에 해당하는 키값중에 x가 포함되어 있지 않거나, 
-			// map에 해당하는 키 값을 감소시킬려고 했는데 이미 0이라서 감소 시킬수 없으면 개수가 맞지 않기 때문에 종료시킨다.
-			if(!map.containsKey(x) || map.get(x) == 0) {
-				return "NO";
-			}
-			map.put(x, map.get(x) - 1);
+	public ArrayList<Integer> solution(int n, int k, int[] arr) {
+		ArrayList<Integer> answer = new ArrayList<Integer>();
+		HashMap<Integer, Integer> HM = new HashMap<Integer, Integer>();
+		
+		for(int i = 0; i < k - 1; i++) { // 3개 세팅 , rt값을 빼기 때문에 3개만 세팅
+			HM.put(arr[i], HM.getOrDefault(arr[i], 0) + 1);
 		}
 		
+		int lt = 0;
+		for(int rt = k - 1; rt < n; rt++) {
+			HM.put(arr[rt], HM.getOrDefault(arr[rt], 0) + 1);
+			answer.add(HM.size());
+			HM.put(arr[lt], HM.get(arr[lt]) - 1);
+			if(HM.get(arr[lt]) == 0) {
+				HM.remove(arr[lt]);
+			}
+			lt++;
+		}
+			
 		return answer;
 	}
 	
 	public static void main(String[] args) {
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		String a = kb.next();
-		String b = kb.next();
-		System.out.print(T.solution(a, b));
+		int n = kb.nextInt();
+		int k = kb.nextInt();
+		int[] arr= new int[n];
+		for(int i = 0; i < n; i++) { // 공백을 기준으로 입력 값을 배열에 담아준다.
+			arr[i] = kb.nextInt();
+		}
+		for(int x : T.solution(n, k, arr)) {
+			System.out.print(x + " ");
+		}
 	}
 }
