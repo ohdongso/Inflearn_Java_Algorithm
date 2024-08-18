@@ -3,8 +3,8 @@
 -map.containsKey('A'): A라는 key가 있으면, true를 리턴한다. 없으면 false를 리턴한다.
 -map.size(): key의 개수를 리턴하는 함수.
 -map.remove('A'): key값이 A에 해당하는 객체를 삭제한다. 삭제될 때, key에 해당하는 value를 리턴한다.
+-equals: 2개의 HashMap(key,value)를 비교할 때, equals()로 순서가 다르더라도 (key,value)를 비교할 수 있다.
 -
-
 
 
 -kb.nextInt(): 해당 함수로 공백이 있는 숫자를 입력(7 3 9 5 6 12)받을 때 

@@ -1,44 +1,44 @@
 package Section_04_HashMap_TreeSet;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
 	
-	public ArrayList<Integer> solution(int n, int k, int[] arr) {
-		ArrayList<Integer> answer = new ArrayList<Integer>();
-		HashMap<Integer, Integer> HM = new HashMap<Integer, Integer>();
+	public int solution(String a, String b) {
+		int answer = 0;
+		HashMap<Character, Integer> am = new HashMap<Character, Integer>();
+		HashMap<Character, Integer> bm = new HashMap<Character, Integer>();
 		
-		for(int i = 0; i < k - 1; i++) { // 3개 세팅 , rt값을 빼기 때문에 3개만 세팅
-			HM.put(arr[i], HM.getOrDefault(arr[i], 0) + 1);
+		for(char x : b.toCharArray()) {
+			bm.put(x, bm.getOrDefault(x, 0) + 1);
+		}	
+		int L = b.length() - 1;
+		for(int i = 0; i < L; i++) {
+			am.put(a.charAt(i), am.getOrDefault(a.charAt(i), 0) + 1);
 		}
 		
 		int lt = 0;
-		for(int rt = k - 1; rt < n; rt++) {
-			HM.put(arr[rt], HM.getOrDefault(arr[rt], 0) + 1);
-			answer.add(HM.size());
-			HM.put(arr[lt], HM.get(arr[lt]) - 1);
-			if(HM.get(arr[lt]) == 0) {
-				HM.remove(arr[lt]);
+		for(int rt = L; rt < a.length(); rt++) {
+			am.put(a.charAt(rt), am.getOrDefault(a.charAt(rt), 0) + 1);
+			if(am.equals(bm)) {
+				answer++;
+			}
+			am.put(a.charAt(lt), am.get(a.charAt(lt))-1);
+			if(am.get(a.charAt(lt)) == 0) {
+				am.remove(a.charAt(lt));
 			}
 			lt++;
 		}
-			
+		
 		return answer;
 	}
 	
 	public static void main(String[] args) {
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		int n = kb.nextInt();
-		int k = kb.nextInt();
-		int[] arr= new int[n];
-		for(int i = 0; i < n; i++) { // 공백을 기준으로 입력 값을 배열에 담아준다.
-			arr[i] = kb.nextInt();
-		}
-		for(int x : T.solution(n, k, arr)) {
-			System.out.print(x + " ");
-		}
+		String a = kb.next();
+		String b = kb.next();
+		System.out.print(T.solution(a, b));
 	}
 }
