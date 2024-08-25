@@ -4,11 +4,10 @@
 -map.size(): key의 개수를 리턴하는 함수.
 -map.remove('A'): key값이 A에 해당하는 객체를 삭제한다. 삭제될 때, key에 해당하는 value를 리턴한다.
 -equals: 2개의 HashMap(key,value)를 비교할 때, equals()로 순서가 다르더라도 (key,value)를 비교할 수 있다.
--
 
-
--kb.nextInt(): 해당 함수로 공백이 있는 숫자를 입력(7 3 9 5 6 12)받을 때 
- for문을 통해서 숫자 개수만큼 반복해서 한번에 받을수 있다. nextInt는 공백을 포함하지 않기때문에 for문으로 각각 입력 받을수있다.
--Integer.MIN_VALUE: 정수의 최소값을 표현
--Integer.MAX_VALUE: 정수의 최대값을 표현
--Math.max(x, y): x, y중 큰 수를 반환하는 함수
+-Collections.reverseOrder(): TreeSet에서 내림차순 정렬해주는 함수
+-Tset.add(): TreeSet에서 데이터를 추가해주는 함수
+-Tset.remove(143): TreeSet에서 특정값을 지워주는 함수 ==> 143에 해당하는 값을 지워준다.
+-Tset.size(): TreeSet에서 값이 몇 개 있는지 반환하는 함수
+-Tset.first(): (오름차순이면, 최소값을 / 내림차순이면 최대값을) ==> 첫 번째 값을 반환한다.
+-Tset.last(): (오름차순이면, 최대값을 / 내림차순이면 최소값을) ==> 마지막 번째 값을 반환한다.
