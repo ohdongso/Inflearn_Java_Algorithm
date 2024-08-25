@@ -31,7 +31,7 @@ public class _05_K번째_큰_수1 {
 			if(cnt == k) {
 				return x;
 			}
-		}
+		} 
 		 
 		return answer;
 	}
