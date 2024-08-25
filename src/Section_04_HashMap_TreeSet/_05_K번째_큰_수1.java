@@ -32,7 +32,7 @@ public class _05_K번째_큰_수1 {
 				return x;
 			}
 		}
-		
+		 
 		return answer;
 	}
 	
