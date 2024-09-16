@@ -1,6 +1,6 @@
 package Section_06_Stack_Queue;
 
-import java.util.Scanner;
+import java.util.Scanner; 
 import java.util.Stack; 
 
 public class _02_괄호문자제거1 {

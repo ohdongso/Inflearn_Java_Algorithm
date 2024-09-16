@@ -3,7 +3,7 @@ package Section_06_Stack_Queue;
 import java.util.Scanner;
 import java.util.Stack; 
 
-public class Main {
+public class _03_크레인_인형뽑기_카카오1 {
 	/*
 	 	
 	 */
@@ -32,7 +32,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_03_크레인_인형뽑기_카카오1 T = new _03_크레인_인형뽑기_카카오1();
 		Scanner kb = new Scanner(System.in);
 		int n = kb.nextInt();
 		int[][] board = new int[n][n]; // 2차원 배열 선언 ==> board
