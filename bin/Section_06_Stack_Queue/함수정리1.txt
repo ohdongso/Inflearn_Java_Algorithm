@@ -5,7 +5,8 @@
 -size(): 스택의 원소개수를 반환
 -get(i): index에 해당하는 Stack의 원소를 가져온다.
 -peek(i): 스택의 최상단에 있는 값을 반환하는 함수
--
+-Character.isDigit(x): 숫자인지 판별해주는 함수
+
 
 
 

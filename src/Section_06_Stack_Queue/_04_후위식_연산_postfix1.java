@@ -3,7 +3,7 @@ package Section_06_Stack_Queue;
 import java.util.Scanner; 
 import java.util.Stack; 
 
-public class Main {
+public class _04_후위식_연산_postfix1 {
 	/*
 	 	
 	 */
@@ -29,7 +29,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_04_후위식_연산_postfix1 T = new _04_후위식_연산_postfix1();
 		Scanner kb = new Scanner(System.in);
 		String str = kb.next();
 		System.out.println(T.solution(str));
