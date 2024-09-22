@@ -3,7 +3,7 @@ package Section_06_Stack_Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Main {
+public class _05_쇠막대기1 {
 	/*
 	 	* 겹쳐있는 막대기를 레이저로 잘 랐을 때 잘려진 막대기의 총 개수를 구하는 문제다.
 	 	1, 좌측 괄호면 Stack에 푸시
@@ -33,7 +33,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_05_쇠막대기1 T = new _05_쇠막대기1();
 		Scanner kb = new Scanner(System.in);
 		String str = kb.next();
 		System.out.println(T.solution(str));
