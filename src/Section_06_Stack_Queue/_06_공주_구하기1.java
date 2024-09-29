@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner; 
 
-public class Main {
+public class _06_공주_구하기1 {
 	/*
 	 	1, 마지막 2개가 남았을 때, (4,7) > (7,4) > (4,7) > 
 	 	3번째 왕자에 해당하는 4를 poll하고 한명남은 7번 왕자를 반환한다.
@@ -36,7 +36,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_06_공주_구하기1 T = new _06_공주_구하기1();
 		Scanner kb = new Scanner(System.in);
 		
 		int n = kb.nextInt(); // 왕자의 수
