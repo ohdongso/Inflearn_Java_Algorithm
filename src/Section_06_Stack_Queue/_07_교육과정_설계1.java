@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner; 
 
-public class Main {
+public class _07_교육과정_설계1 {
 	/*
 		1, need:필수과목, plan:현수가 작성한 과목계획서
 	 	2, 
@@ -34,7 +34,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_07_교육과정_설계1 T = new _07_교육과정_설계1();
 		
 		Scanner kb = new Scanner(System.in);
 		
