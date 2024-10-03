@@ -4,34 +4,34 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner; 
 
-class Person1 {
+class Person {
 	int id;
 	int priority;
 	
-	public Person1(int id, int priority) { // 생성자
+	public Person(int id, int priority) { // 생성자
 		this.id = id;
 		this.priority = priority;
 	}
-} // Person1 클래스 끝.
+} // Person 클래스 끝.
 
-public class Main {
+public class _08_응급실1 {
 	/*
 		
 	 */
 	public int solution(int n, int m, int[] arr) {
 		int answer = 0;
 		
-		Queue<Person1> Q = new LinkedList<>();
+		Queue<Person> Q = new LinkedList<>();
 		
 		// 큐에 환자index와 위험도를 저장한다.
 		for(int i = 0; i < n; i++) {
-			Q.offer(new Person1(i, arr[i]));
+			Q.offer(new Person(i, arr[i]));
 		}
 		
 		while(!Q.isEmpty()) { // 큐가 비어있지 않을경우에 while문 반복
-			Person1 tmp = Q.poll(); // 제일 앞의 환자를 꺼낸다.
+			Person tmp = Q.poll(); // 제일 앞의 환자를 꺼낸다.
 			
-			for(Person1 x : Q) { // 제일 앞의 환자를 꺼내고 나머지 환자를 하나씩 꺼낸다.
+			for(Person x : Q) { // 제일 앞의 환자를 꺼내고 나머지 환자를 하나씩 꺼낸다.
 				if(x.priority > tmp.priority) { // 꺼낸 환자보다 x환자의 위험도가 더 높다면
 					Q.offer(tmp); // 제일 앞에서 꺼낸 환자를 제일 뒤로 넣는다.
 					tmp = null; // tmp초기화
@@ -53,7 +53,7 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		Main T = new Main();
+		_08_응급실1 T = new _08_응급실1();
 		
 		Scanner kb = new Scanner(System.in);
 		
