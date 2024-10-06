@@ -2,7 +2,7 @@ package Section_07_Sorting_and_Searching;
 
 import java.util.Scanner; 
 
-public class Main {
+public class _02_버블_정렬1 {
 	/*
 
 	 */
@@ -33,7 +33,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_02_버블_정렬1 T = new _02_버블_정렬1();
 		
 		Scanner kb = new Scanner(System.in);
 		int n = kb.nextInt(); // 입력받을 숫자의 개수
