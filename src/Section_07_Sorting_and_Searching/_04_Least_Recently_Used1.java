@@ -2,7 +2,18 @@ package Section_07_Sorting_and_Searching;
 
 import java.util.Scanner;
 
-public class Main {
+public class _04_Least_Recently_Used1 {
+	/*
+	  	1, 캐시사이즈, 작업개수 2개를 입력받는다.
+	  	2, 작업배열에서 작업번호를 하나씩 꺼내서 캐시배열에 있는지 비교한다.
+	  	3, 있다면, hit로 pos에 작업번호 index를 저장한다.
+	 	4, pos가 -1이면 miss로 캐시배열의 마지막부터 2번째까지 반복하며 >으로한칸씩 당겨준다.
+	 	5, pos가 -1이 아니면 hit로 pos부터 2번째까지 반복하며 >으로한칸씩 당겨준다.
+	  	6, 마지막으로 (hit, miss)든 선택된 작업번호를 1번째에 저장해 준다.
+	  	7, 이 알고리즘은 hit가 발생하면 i가 pos부터시작, miss가 발생하면 size-1부터 시작한뒤
+	  	   한 칸씩 당겨주는걸 파악하는게 중요하다.!
+	 */
+	
 	
 	// s=size, n=작업의 개수, arr=작업이 처리하는 순서
 	public int[] solution(int size, int n, int[] arr) {
@@ -37,7 +48,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_04_Least_Recently_Used1 T = new _04_Least_Recently_Used1();
 		Scanner kb = new Scanner(System.in);
 		
 		int s = kb.nextInt(); // 캐시 사이즈
