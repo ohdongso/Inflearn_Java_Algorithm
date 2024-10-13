@@ -3,7 +3,7 @@ package Section_07_Sorting_and_Searching;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class _05_중복_확인1 {
 	/*
 
 	 */
@@ -22,7 +22,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_05_중복_확인1 T = new _05_중복_확인1();
 		Scanner kb = new Scanner(System.in);
 		
 		int n = kb.nextInt(); // 입력받을 숫자 개수
