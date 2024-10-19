@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class _06_장난꾸러기1 {
 	/*
 
 	 */
@@ -24,7 +24,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_06_장난꾸러기1 T = new _06_장난꾸러기1();
 		Scanner kb = new Scanner(System.in);
 		
 		int n = kb.nextInt(); // 반 전체 학생 수
