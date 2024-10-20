@@ -1,41 +1,48 @@
 package Section_07_Sorting_and_Searching;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.ArrayList; 
+import java.util.Collections;
 import java.util.Scanner;
 
-public class Main {
-	/*
-
-	 */
-	public ArrayList<Integer> solution(int n, int[] arr) {
-		ArrayList<Integer> answer = new ArrayList<Integer>();
-		
-		int[] tmp = arr.clone();
-		Arrays.sort(tmp);
-		
-		for(int i = 0; i < n; i++) {
-			if(arr[i] != tmp[i]) {
-				answer.add(i+1);
-			}
-		}
-		
-		return answer;
+class Point1 implements Comparable<Point>{
+	public int x, y;
+	
+	Point1(int x, int y) {
+		this.x = x;
+		this.y = y;
 	}
+	
+	@Override
+	public int compareTo(Point o) {
+		// 오름차순정렬(this.y - o.y), 내림차순정렬(o.y - this.y)
+		// this.y를 기준으로 오름차순 정렬하기 위해서는 this.y - o.x(비교할값)가 음수가 나와야 한다.
+		if(this.x ==  o.x) { // x값이 같으면 y값을 정렬한다.
+			return this.y - o.y;
+		} else { // x값이 다르면 x값을 정렬한다.
+			return this.x - o.x;
+		}	
+	}
+	
+}
+
+public class Main {
 	
 	public static void main(String[] args) {
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
 		
-		int n = kb.nextInt(); // 반 전체 학생 수
-		int[] arr= new int[n];
-		
+		int n = kb.nextInt(); // 좌표의 개수를 입력받음.
+		ArrayList<Point> arr = new ArrayList<Point>();
+				
 		for(int i = 0; i < n; i++) {
-			arr[i] = kb.nextInt();
+			int x = kb.nextInt();
+			int y = kb.nextInt();
+			arr.add(new Point(x, y));
 		}
 		
-		for(int x : T.solution(n, arr)) {
-			System.out.print(x + " ");
+		Collections.sort(arr);
+		for(Point o : arr) {
+			System.out.println(o.x + " " + o.y);
 		}
 	}
 }
