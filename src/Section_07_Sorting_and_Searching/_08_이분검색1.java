@@ -3,7 +3,7 @@ package Section_07_Sorting_and_Searching;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class _08_이분검색1 {
 	/*
 	 	1, mid가 정렬된 배열에서 순서가 되는 이유는, lt와 rt가 중앙값을 기준으로 변수에 저장 되기 때문에
 	 	lt는 0에서 mid가 더해진 값으로, rt는 n-1값에서 mid가 빼기 된 값으로 변경 되기때문에
@@ -36,7 +36,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_08_이분검색1 T = new _08_이분검색1();
 		Scanner kb = new Scanner(System.in);
 		
 		int n = kb.nextInt(); // 입력받을 숫자 개수
