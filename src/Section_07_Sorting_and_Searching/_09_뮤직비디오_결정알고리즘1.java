@@ -3,11 +3,17 @@ package Section_07_Sorting_and_Searching;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class _09_뮤직비디오_결정알고리즘1 {
 	/*
-	 	
+	 	1, n(전체노래개수), m(사용가능한 CD 개수), arr(입력받을 노래 배열) 3가지를 입력받는다.
+	 	2, lt는 노래배열중 최대값을 rt는 노래배열의 총합을 기준으로 초기화 한다.
+	 	3, (lt <= rt) 이조건으로 while문을 반복 시키고, mid(중앙값) == (lt+rt)/2를 구해준다.
+	 	4, count()함수를 이용해, capacity를 기준으로 사용 CD개수를 구한다.
+	 	5, 사용개수 cnt가 사용할수 있는 cd 개수 m이하이면 답이 될 수 있고, mid를 줄여나가면서 최적을 값을 찾는다. 
+	 	   그리고 answer에 CD용량을 저장한다.
+	 	6, 사용개수 cnt가 사용할수 있는 cd 개수 m초과 이면 답이 될 수 없고, mid를 증가해주면서 범위안에 값을 찾는다.
+	 	7, (lt <= rt)을 만족하지 않을 때 까지 while문이 반복되기 때문에 최적의 값을 찾을 수 있다.!
 	 */
-	
 	public int count(int[] arr, int capacity) {
 		// 첫 번째 CD, 현재 사용되고 있는 CD에 용량을 확인하는 변수
 		int cnt = 1, sum = 0;
@@ -59,7 +65,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_09_뮤직비디오_결정알고리즘1 T = new _09_뮤직비디오_결정알고리즘1();
 		Scanner kb = new Scanner(System.in);
 		
 		int n = kb.nextInt(); // 전체 노래 개수
