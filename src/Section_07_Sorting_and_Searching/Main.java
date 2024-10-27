@@ -5,55 +5,40 @@ import java.util.Scanner;
 
 public class Main {
 	/*
-	 	
+	 
 	 */
-	
-	public int count(int[] arr, int capacity) {
-		// 첫 번째 CD, 현재 사용되고 있는 CD에 용량을 확인하는 변수
-		int cnt = 1, sum = 0;
+	public int count(int[] arr, int dist) {
 		
-		for(int x : arr) {
+		int cnt = 1; // 말 마리 수 = 1마리 배치
+		int ep = arr[0]; // 바로 전에 말을 배치한 마구간의 좌표
+		
+		for(int i = 1; i < arr.length; i++) {
 			// CD한장의 용량이 넘어가면
-			if(sum + x > capacity) {
-				cnt++; // cd추가
-				sum = x; // 새로운 CD에 노래 용량을 초기화 시켜준다.
-			} else {
-				sum += x;
-			}
+			if(arr[i] - ep >= dist) {
+				cnt++; // 말 한마리 증가
+				ep = arr[i];
+			} 
 		} // for문 끝.
 		
 		return cnt;
 	}
 	
-	public int solution(int n, int m, int[] arr) {
+	public int solution(int n, int c, int[] arr) {
 		int answer = 0;
 		
-		// 입력받은 숫자중 최대값이 lt의 초기값이 된다.
-		// CD 한장에 최소한 1곡이 들어갈수 있는 경우의 수를 의미
-		int lt = Arrays.stream(arr).max().getAsInt();
+		Arrays.sort(arr); // 오름차순 정렬
+		int lt = 1;
+		int rt = arr[n - 1];
 		
-		// 입력받은 숫자들의 합이 rt의 초기값이 된다.
-		// CD 한장에 모든 곡이 들어갈수 있는 경우의 수를 의미
-		int rt = Arrays.stream(arr).sum();
-		
-		// 이분검색
 		while(lt <= rt) {
-			int mid = (lt + rt) / 2; // CD 한장의 용량
-			
-			// 사용가능한 CD 개수 m보다 사용된 cd 개수가 더 적으면, rt를 감소시킨다.
-			// 이쪽으로 들어오는건 더좋은 값을 찾기위해 범위를 줄여나가는 것
-			if(count(arr, mid) <= m) { // 용량 감소 시켜 최적의 값을 찾는다.
+			int mid = (lt + rt) / 2; // 말과 말사이의 거리
+			if(count(arr, mid) >= c) { // mid에 해당하는 거리로 말을 다 배치할수 있다. mid를 좁혀나간다.
 				answer = mid;
-				rt = mid - 1;
-			
-			// m보다 사용된 cd 개수가 더 많으면, lt를 증가시킨다.
-			// 이쪽으로 들어오는건 값이 될수가 없어서 다른 값을 찾는 것
-			} else { // 용량을 증가 시켜 범위에 해당시키는 값을 찾는다.
-				// 이값은 answer에 저장 하면 안되는 이유가 범위에 포함 자체가 안된다.
-				// answer = mid; 
 				lt = mid + 1;
-			}		
-		} // while문 끝.
+			} else { // 사이거리가 너무 멀어서 말을 다 배치 할 수 없다. mid를 증가시켜나간다.
+				rt = mid - 1;
+			}
+		} // while문 끝
 		
 		return answer;
 	}
@@ -62,15 +47,15 @@ public class Main {
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
 		
-		int n = kb.nextInt(); // 전체 노래 개수
-		int m = kb.nextInt(); // 사용가능한 CD 개수
+		int n = kb.nextInt(); // 마구간 좌표 개수
+		int c = kb.nextInt(); // 말 마리 수
 		
-		int[] arr = new int[n]; // 입력받을 노래 배열
+		int[] arr = new int[n]; // 마구간 좌표 저장 될 배열
 		
 		for(int i = 0; i < n; i++) {
 			arr[i] = kb.nextInt();
 		} // for문 끝.
 		
-		System.out.println(T.solution(n, m, arr));
+		System.out.println(T.solution(n, c, arr));
 	}
 }
