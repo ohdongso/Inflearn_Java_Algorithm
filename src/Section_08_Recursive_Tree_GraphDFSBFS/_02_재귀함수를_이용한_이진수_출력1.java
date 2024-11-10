@@ -1,6 +1,6 @@
-package Section_07_Sorting_and_Searching;
+package Section_08_Recursive_Tree_GraphDFSBFS;
 
-public class _12_재귀함수를_이용한_이진수_출력1 {
+public class _02_재귀함수를_이용한_이진수_출력1 {
 	/*
 		1, DFS(11) > DFS(n/2)
 		2, DFS(5) > DFS(n/2)
@@ -25,7 +25,7 @@ public class _12_재귀함수를_이용한_이진수_출력1 {
 	}
 	
 	public static void main(String[] args) {
-		_12_재귀함수를_이용한_이진수_출력1 T = new _12_재귀함수를_이용한_이진수_출력1();
+		_02_재귀함수를_이용한_이진수_출력1 T = new _02_재귀함수를_이용한_이진수_출력1();
 		T.DFS(11);		
 	}
 }

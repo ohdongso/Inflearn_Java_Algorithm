@@ -1,6 +1,6 @@
-package Section_07_Sorting_and_Searching;
+package Section_08_Recursive_Tree_GraphDFSBFS;
 
-public class _11_재귀함수1 {
+public class _01_재귀함수1 {
 	/*
 		1, 재귀함수는 스택프레임이 생긴다. 스택프레임 안에는(매개변수, 지역변수, 복귀주소) 등이 포함된다.
 		2, DFS(3), DFS(2), DFS(1) 순서로 쌓인다.
@@ -30,7 +30,7 @@ public class _11_재귀함수1 {
 	}
 	
 	public static void main(String[] args) {
-		_11_재귀함수1 T = new _11_재귀함수1();
+		_01_재귀함수1 T = new _01_재귀함수1();
 		T.DFS(3); // DFS는 깊이우선탐색의 약자이다
 	}
 }

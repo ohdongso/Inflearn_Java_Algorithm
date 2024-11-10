@@ -1,6 +1,6 @@
 package Section_07_Sorting_and_Searching;
 
-
+import Section_08_Recursive_Tree_GraphDFSBFS._02_재귀함수를_이용한_이진수_출력1;
 
 public class Main {
 	
@@ -14,7 +14,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		_12_재귀함수를_이용한_이진수_출력1 T = new _12_재귀함수를_이용한_이진수_출력1();
+		_02_재귀함수를_이용한_이진수_출력1 T = new _02_재귀함수를_이용한_이진수_출력1();
 		T.DFS(11);		
 	}
 }
