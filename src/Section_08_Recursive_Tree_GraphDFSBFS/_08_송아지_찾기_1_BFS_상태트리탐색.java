@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-class Main {
+class _08_송아지_찾기_1_BFS_상태트리탐색 {
 	
 	/*
 		1, 5에서 움직일수 있는 경우를 트리로 뻗는다. ==> Level(0)
@@ -21,8 +21,9 @@ class Main {
 	Queue<Integer> Q = new LinkedList<Integer>();
 	
 	public int BFS(int s, int e) {
-		ch = new int[10001];
-		ch[s] = 1; // 출발 지점
+		ch = new int[10001]; // 현수와 송아지가 움직일수 있는 좌표상의 필드 1~10000
+		
+		ch[s] = 1; // 출발 지점(현수시작위치)
 		Q.offer(s);
 		int L = 0;
 		
@@ -34,12 +35,12 @@ class Main {
 				for(int j = 0; j < 3; j++) { // 자식 노드 값을 구해주고 다시 큐에 넣는다.
 					int nx = x + dis[j];
 					
-					if(nx == e) {
+					if(nx == e) { // nx에서 3가지 경우에수를 할때는 자식 노드이기 때문에 현재노드의 + 1을 해준다.
 						return L + 1;
 					}
 					
 					if(nx >= 1 && nx <= 10000 && ch[nx] == 0) { // 참이면 아직 자식노드 값이 나오지 않은 것
-						ch[nx] = 1; // 체크지점 변경
+						ch[nx] = 1; // index값은 노드의 데이터 이므로 상태값만 1로 변경해준다.
 						Q.offer(nx); // 점프로 변경된 자식노드의 값을 큐에 저장
 					}
 				}
@@ -51,10 +52,10 @@ class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_08_송아지_찾기_1_BFS_상태트리탐색 T = new _08_송아지_찾기_1_BFS_상태트리탐색();
 		Scanner kb = new Scanner(System.in);
 		int s = kb.nextInt(); // 현수의 위치 5
-		int e = kb.nextInt(); // 송아지의 위치
+		int e = kb.nextInt(); // 송아지의 위치 14
 		System.out.println(T.BFS(s, e));
 		
 	} // main 끝.
