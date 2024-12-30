@@ -17,7 +17,6 @@ class _11_그래프와_인접행렬1 {
 	 	
 	 	* 정점이 많으면 인접리스트를 사용한다.(차후 설명)
 	 */
-
 	
 	public static void main(String[] args) {
 		
