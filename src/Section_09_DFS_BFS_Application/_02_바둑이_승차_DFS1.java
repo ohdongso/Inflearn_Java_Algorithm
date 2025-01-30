@@ -2,7 +2,7 @@ package Section_09_DFS_BFS_Application;
 
 import java.util.Scanner;
 
-public class Main {
+public class _02_바둑이_승차_DFS1 {
 	
 	/*
 		부분집합 문제
@@ -34,7 +34,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		Main T = new Main();
+		_02_바둑이_승차_DFS1 T = new _02_바둑이_승차_DFS1();
 		
 		Scanner kb = new Scanner(System.in);
 		c = kb.nextInt(); // 최대적재 무게
@@ -50,3 +50,6 @@ public class Main {
 		
 	}
 }
+
+
+
