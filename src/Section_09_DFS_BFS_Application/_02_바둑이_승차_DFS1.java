@@ -30,6 +30,7 @@ public class _02_¹ÙµÏÀÌ_½ÂÂ÷_DFS1 {
 			DFS(L+1, sum + arr[L], arr);
 			DFS(L+1, sum, arr);
 		}
+		
 	}
 	
 	public static void main(String[] args) {
