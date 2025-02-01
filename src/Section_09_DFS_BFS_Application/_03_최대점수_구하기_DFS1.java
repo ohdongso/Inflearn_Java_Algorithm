@@ -2,7 +2,7 @@ package Section_09_DFS_BFS_Application;
 
 import java.util.Scanner;
 
-public class Main {
+public class _03_최대점수_구하기_DFS1 {
 	
 	/*
 		문제 : 주어진 시간동안 문제를 풀때 최대점수를 얻을 수 있는 경우를 구해라.
@@ -17,7 +17,6 @@ public class Main {
 	static int answer = Integer.MIN_VALUE, n, m;
 	boolean flag = false;
 	public void DFS(int L, int sum, int time, int[] ps, int[] pt) {
-		
 		if(time > m) { // m(제한시간)이 넘는 재귀는 필터링 해준다.
 			return;
 		}
@@ -32,7 +31,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_03_최대점수_구하기_DFS1 T = new _03_최대점수_구하기_DFS1();
 		
 		Scanner kb = new Scanner(System.in);
 		n = kb.nextInt(); // 문제개수
