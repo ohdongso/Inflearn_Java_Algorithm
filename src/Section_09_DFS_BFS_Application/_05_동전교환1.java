@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class Main {
+public class _05_동전교환1 {
 	
 	/*
 		문제 : 여러 단위의 동전들이 주어져 있을때 거스름돈을 가장 적은 수의 동전으로 교환해주려면 어떻게 주면 되는가?
@@ -31,7 +31,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_05_동전교환1 T = new _05_동전교환1();
 		
 		Scanner kb = new Scanner(System.in);
 		n = kb.nextInt();
