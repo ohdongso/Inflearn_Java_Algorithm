@@ -2,7 +2,7 @@ package Section_09_DFS_BFS_Application;
 
 import java.util.Scanner;
 
-public class Main {
+public class _07_조합의_경우수1 {
 	int[][] dy = new int[35][35];
 	
 	public int DFS(int n, int r) {
@@ -17,8 +17,9 @@ public class Main {
 		}
 	}
 	
+	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_07_조합의_경우수1 T = new _07_조합의_경우수1();
 		Scanner kb = new Scanner(System.in);
 		int n = kb.nextInt();
 		int r = kb.nextInt();
@@ -26,3 +27,11 @@ public class Main {
 		System.out.println(T.DFS(n, r));
 	}
 }
+
+
+
+
+
+
+
+
