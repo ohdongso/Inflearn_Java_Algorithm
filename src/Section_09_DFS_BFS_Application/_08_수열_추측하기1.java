@@ -2,7 +2,7 @@ package Section_09_DFS_BFS_Application;
 
 import java.util.Scanner;
 
-public class Main {
+public class _08_수열_추측하기1 {
 	
 	static int[] b, p, ch;
 	static int n, f;
@@ -54,7 +54,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		Main T = new Main();
+		_08_수열_추측하기1 T = new _08_수열_추측하기1();
 		Scanner kb = new Scanner(System.in);
 		n = kb.nextInt();
 		f = kb.nextInt();
@@ -67,3 +67,14 @@ public class Main {
 		T.DFS(0, 0);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
