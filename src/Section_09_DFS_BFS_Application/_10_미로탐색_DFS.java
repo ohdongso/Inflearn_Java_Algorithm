@@ -2,7 +2,7 @@ package Section_09_DFS_BFS_Application;
 
 import java.util.Scanner;
 
-public class Main {
+public class _10_¹Ì·ÎÅ½»ö_DFS {
 	
 	static int[] dx = {-1, 0, 1, 0};
 	static int[] dy = {0, 1, 0, -1};
@@ -26,7 +26,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {	
-		Main T = new Main();
+		_10_¹Ì·ÎÅ½»ö_DFS T = new _10_¹Ì·ÎÅ½»ö_DFS();
 		Scanner kb = new Scanner(System.in);
 		
 		board = new int[8][8];
@@ -41,3 +41,11 @@ public class Main {
 		System.out.print(answer);
 	}
 }
+
+
+
+
+
+
+
+
