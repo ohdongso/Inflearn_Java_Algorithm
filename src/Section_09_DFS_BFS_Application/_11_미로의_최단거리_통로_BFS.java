@@ -4,15 +4,15 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-class Point1 {
+class Point {
 	public int x, y;
-	Point1(int x, int y) {
+	Point(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
 }
 
-public class Main {
+public class _11_미로의_최단거리_통로_BFS {
 	
 	static int[] dx = {-1, 0, 1, 0};
 	static int[] dy = {0, 1, 0, -1};
@@ -37,7 +37,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_11_미로의_최단거리_통로_BFS T = new _11_미로의_최단거리_통로_BFS();
 		Scanner kb = new Scanner(System.in);
 		board = new int[8][8];
 		dis = new int[8][8];
@@ -54,3 +54,11 @@ public class Main {
 		}
 	}
 }
+
+
+
+
+
+
+
+
