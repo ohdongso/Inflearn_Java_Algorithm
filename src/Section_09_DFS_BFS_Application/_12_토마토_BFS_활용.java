@@ -4,31 +4,31 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-class Point3 {
+class Point2 {
 	public int x, y;
-	Point3(int x, int y) {
+	Point2(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
 }
 
-public class Main {
+public class _12_토마토_BFS_활용 {
 	
 	static int[] dx = {-1, 0, 1, 0};
 	static int[] dy = {0, 1, 0, -1};
 	static int[][] board, dis;
 	static int n, m;
-	static Queue<Point3> Q = new LinkedList<Point3>();
+	static Queue<Point2> Q = new LinkedList<Point2>();
 	
 	public void BFS() {
 		while(!Q.isEmpty()) {
-			Point3 tmp = Q.poll();
+			Point2 tmp = Q.poll();
 			for(int i = 0; i < 4; i++) {
 				int nx = tmp.x+dx[i];
 				int ny = tmp.y+dy[i];
 				if(nx >= 0 && nx < n && ny >= 0 && ny < m && board[nx][ny] == 0) {
 					board[nx][ny] = 1;
-					Q.offer(new Point3(nx, ny));
+					Q.offer(new Point2(nx, ny));
 					dis[nx][ny] = dis[tmp.x][tmp.y] + 1;
 				}
 			}
@@ -36,7 +36,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_12_토마토_BFS_활용 T = new _12_토마토_BFS_활용();
 		Scanner kb = new Scanner(System.in);
 		m = kb.nextInt(); // 열
 		n = kb.nextInt(); // 행
@@ -46,7 +46,7 @@ public class Main {
 			for(int j = 0; j < m; j++) {
 				board[i][j] = kb.nextInt();
 				if(board[i][j] == 1) {
-					Q.offer(new Point3(i, j));
+					Q.offer(new Point2(i, j));
 				}
 			}
 		}
@@ -72,3 +72,11 @@ public class Main {
 		}
 	}
 }
+
+
+
+
+
+
+
+
