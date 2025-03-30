@@ -2,7 +2,7 @@ package Section_09_DFS_BFS_Application;
 
 import java.util.Scanner;
 
-public class _13_섬나라_아일랜드1 {
+public class _13_섬나라_아일랜드_DFS {
 	static int answer = 0, n;
 	static int[] dx = {-1,-1,0,1,1,1,0,-1};
 	static int[] dy = {0,1,1,1,0,-1,-1,-1};
@@ -30,7 +30,7 @@ public class _13_섬나라_아일랜드1 {
 	}
 	
 	public static void main(String[] args) {
-		_13_섬나라_아일랜드1 T = new _13_섬나라_아일랜드1();
+		_13_섬나라_아일랜드_DFS T = new _13_섬나라_아일랜드_DFS();
 		Scanner kb = new Scanner(System.in);
 		n=kb.nextInt();
 		int[][] arr = new int[n][n];
