@@ -4,29 +4,29 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-class Point3 {
+class Point1 {
 	int x, y;
-	Point3(int x, int y) {
+	Point1(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
 }
 
-public class Main {
+public class _14_섬나라_아일랜드_BFS {
 	static int answer = 0, n;
 	static int[] dx = {-1,-1,0,1,1,1,0,-1};
 	static int[] dy = {0,1,1,1,0,-1,-1,-1};
-	Queue<Point3> queue = new LinkedList<>();	
+	Queue<Point1> queue = new LinkedList<>();	
 	public void BFS(int x, int y, int[][] board) {
-		queue.add(new Point3(x, y));
+		queue.add(new Point1(x, y));
 		while(!queue.isEmpty()) {
-			Point3 pos = queue.poll();
+			Point1 pos = queue.poll();
 			for(int i = 0; i < 8; i++) {
 				int nx = pos.x+dx[i];
 				int ny = pos.y+dy[i];
 				if(nx >= 0 && nx < n && ny >= 0 && ny < n && board[nx][ny] == 1) {
 					board[nx][ny] = 0;
-					queue.add(new Point3(nx, ny));
+					queue.add(new Point1(nx, ny));
 				}
 			}
 		}	
@@ -45,7 +45,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_14_섬나라_아일랜드_BFS T = new _14_섬나라_아일랜드_BFS();
 		Scanner kb = new Scanner(System.in);
 		n=kb.nextInt();
 		int[][] arr = new int[n][n];
@@ -58,3 +58,11 @@ public class Main {
 		System.out.println(answer);
 	}
 }
+
+
+
+
+
+
+
+
