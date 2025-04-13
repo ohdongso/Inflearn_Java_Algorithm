@@ -3,9 +3,9 @@ package Section_09_DFS_BFS_Application;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class point {
+class pOINT5 {
 	public int x, y;
-	point(int x, int y) {
+	pOINT5(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
@@ -14,13 +14,13 @@ class point {
 public class Main {
 	static int n, m, len, answer = Integer.MAX_VALUE;
 	static int[] combi;
-	static ArrayList<point> hs, pz;
+	static ArrayList<pOINT5> hs, pz;
 	
 	public void DFS(int L, int s) {
 		if(L == m) {
 			
 			int sum = 0;
-			for(point h : hs) {
+			for(pOINT5 h : hs) {
 				int dis = Integer.MAX_VALUE;
 				for(int i : combi) {
 					dis = Math.min(dis, Math.abs(h.x - pz.get(i).x) + Math.abs(h.y - pz.get(i).y));
@@ -56,9 +56,9 @@ public class Main {
 			for(int j = 0; j < n; j++) {
 				int tmp = kb.nextInt();
 				if(tmp == 1) {
-					hs.add(new point(i, j));
+					hs.add(new pOINT5(i, j));
 				} else if(tmp == 2) {
-					pz.add(new point(i, j));
+					pz.add(new pOINT5(i, j));
 				}
 			}
 		}
