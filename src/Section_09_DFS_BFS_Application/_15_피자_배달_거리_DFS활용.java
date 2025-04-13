@@ -3,24 +3,24 @@ package Section_09_DFS_BFS_Application;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class point {
+class Point4 {
 	public int x, y;
-	point(int x, int y) {
+	Point4(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
 }
 
-public class Main {
+public class _15_피자_배달_거리_DFS활용 {
 	static int n, m, len, answer = Integer.MAX_VALUE;
 	static int[] combi;
-	static ArrayList<point> hs, pz;
+	static ArrayList<Point4> hs, pz;
 	
 	public void DFS(int L, int s) {
 		if(L == m) {
 			
 			int sum = 0;
-			for(point h : hs) {
+			for(Point4 h : hs) {
 				int dis = Integer.MAX_VALUE;
 				for(int i : combi) {
 					dis = Math.min(dis, Math.abs(h.x - pz.get(i).x) + Math.abs(h.y - pz.get(i).y));
@@ -46,7 +46,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_15_피자_배달_거리_DFS활용 T = new _15_피자_배달_거리_DFS활용();
 		Scanner kb = new Scanner(System.in);
 		n = kb.nextInt();
 		m = kb.nextInt();
@@ -56,9 +56,9 @@ public class Main {
 			for(int j = 0; j < n; j++) {
 				int tmp = kb.nextInt();
 				if(tmp == 1) {
-					hs.add(new point(i, j));
+					hs.add(new Point4(i, j));
 				} else if(tmp == 2) {
-					pz.add(new point(i, j));
+					pz.add(new Point4(i, j));
 				}
 			}
 		}
@@ -70,3 +70,10 @@ public class Main {
 		
 	}
 }
+
+
+
+
+
+
+
