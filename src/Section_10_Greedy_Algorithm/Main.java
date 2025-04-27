@@ -1,26 +1,26 @@
-package Section_09_DFS_BFS_Application;
+package Section_10_Greedy_Algorithm;
 
 import java.util.*;
 
-class Body implements Comparable<Body> {
+class Body1 implements Comparable<Body1> {
 	public int h, w;
-	Body(int h, int w) {
+	Body1(int h, int w) {
 		this.h = h;
 		this.w = w;
 	}
 	@Override
-	public int compareTo(Body o) {
+	public int compareTo(Body1 o) {
 		return o.h-this.h;
 	}
 }
 
-public class _16_씨름_선수1 {
+public class Main {
 	
-	public int solution(ArrayList<Body> arr, int n) {
+	public int solution(ArrayList<Body1> arr, int n) {
 		int cnt = 0; // 선발되는 인원 수
 		Collections.sort(arr);
 		int max = Integer.MIN_VALUE;
-		for(Body ob : arr) {
+		for(Body1 ob : arr) {
 			// System.out.println(ob.h + ", " + ob.w);
 			if(ob.w > max) {
 				max = ob.w;
@@ -31,23 +31,16 @@ public class _16_씨름_선수1 {
 	}
 	
 	public static void main(String[] args) {
-		_16_씨름_선수1 T = new _16_씨름_선수1();
+		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
 		int n = kb.nextInt();
-		ArrayList<Body> arr = new ArrayList<>();
+		ArrayList<Body1> arr = new ArrayList<>();
 		for(int i = 0; i < n; i++) {
 			int h = kb.nextInt();
 			int w = kb.nextInt();
-			arr.add(new Body(h, w));
+			arr.add(new Body1(h, w));
 		}
 		System.out.println(T.solution(arr, n));
 		
 	}
 }
-
-
-
-
-
-
-
