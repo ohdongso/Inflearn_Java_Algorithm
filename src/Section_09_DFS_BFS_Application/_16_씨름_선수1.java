@@ -2,25 +2,25 @@ package Section_09_DFS_BFS_Application;
 
 import java.util.*;
 
-class Body1 implements Comparable<Body1> {
+class Body implements Comparable<Body> {
 	public int h, w;
-	Body1(int h, int w) {
+	Body(int h, int w) {
 		this.h = h;
 		this.w = w;
 	}
 	@Override
-	public int compareTo(Body1 o) {
+	public int compareTo(Body o) {
 		return o.h-this.h;
 	}
 }
 
-public class Main {
+public class _16_씨름_선수1 {
 	
-	public int solution(ArrayList<Body1> arr, int n) {
+	public int solution(ArrayList<Body> arr, int n) {
 		int cnt = 0; // 선발되는 인원 수
 		Collections.sort(arr);
 		int max = Integer.MIN_VALUE;
-		for(Body1 ob : arr) {
+		for(Body ob : arr) {
 			// System.out.println(ob.h + ", " + ob.w);
 			if(ob.w > max) {
 				max = ob.w;
@@ -31,16 +31,23 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Main T = new Main();
+		_16_씨름_선수1 T = new _16_씨름_선수1();
 		Scanner kb = new Scanner(System.in);
 		int n = kb.nextInt();
-		ArrayList<Body1> arr = new ArrayList<>();
+		ArrayList<Body> arr = new ArrayList<>();
 		for(int i = 0; i < n; i++) {
 			int h = kb.nextInt();
 			int w = kb.nextInt();
-			arr.add(new Body1(h, w));
+			arr.add(new Body(h, w));
 		}
 		System.out.println(T.solution(arr, n));
 		
 	}
 }
+
+
+
+
+
+
+
