@@ -27,7 +27,7 @@ public class _01_문자_찾기1 {
 		
 		return answer;
 	}
-	
+	 
 	public static void main(String[] args) {
 		_01_문자_찾기1 T = new _01_문자_찾기1();
 		
