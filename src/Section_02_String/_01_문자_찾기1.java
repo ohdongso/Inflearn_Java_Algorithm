@@ -15,7 +15,7 @@ public class _01_문자_찾기1 {
 	
 	public int solution(String str, char t) {
 		int answer = 0;
-		
+		 
 		str = str.toUpperCase();
 		t = Character.toUpperCase(t);
 		
